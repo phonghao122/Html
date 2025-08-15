@@ -9,4 +9,5 @@ document.getElementById("convert").addEventListener("click", function() {
         let result = amount.value*23000;
         document.getElementById("result").innerHTML = `Result: ${result} VND`;
     }
+    else alert("Chọn lại đơn vị tiền tệ");
 })
