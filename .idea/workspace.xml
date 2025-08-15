@@ -5,11 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2e75ea53-4827-4927-9ffa-9add33f2a973" name="Changes" comment="Tao CV">
-      <change afterPath="$PROJECT_DIR$/Lession7/Caculator.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lession7/Caculator.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lession7/currencyConverter.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lession7/currencyConverter.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lession7/Caculator.js" beforeDir="false" afterPath="$PROJECT_DIR$/Lession7/Caculator.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -115,7 +111,7 @@
       <workItem from="1755053100329" duration="1745000" />
       <workItem from="1755074626969" duration="1695000" />
       <workItem from="1755084301057" duration="4891000" />
-      <workItem from="1755257384739" duration="2589000" />
+      <workItem from="1755257384739" duration="3540000" />
     </task>
     <task id="LOCAL-00001" summary="Tao Danh Sach">
       <option name="closed" value="true" />
