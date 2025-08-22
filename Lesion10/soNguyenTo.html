@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Số Nguyên Tố</title>
+</head>
+<body>
+<input type="number" id="n"><br>
+<button id="submit">Check</button>
+<br> <br>
+<p id="result">
+    Result:
+</p>
+</body>
+<script>
+    document.getElementById("submit").addEventListener("click", function() {
+      let n = document.getElementById("n").value*1;
+      if(typeof n === "number"){
+          let count;
+          let countUoc;
+          let m;
+          let data = "1 2 3 ";
+          if(n < 3){
+              count = 0;
+              m = 1;
+              data = "";
+          }else {
+              count = 2;
+              m = 4;
+              data = "2 3 ";
+          }
+          while (count < n){
+              countUoc = 0;
+              for (let i = 1; i <= m; i++){
+                  if(m%i===0){
+                      countUoc++;
+                  }
+                  if (countUoc>2){
+                      break;
+                  }
+              }
+              if(countUoc===2){
+                  count++;
+                  data += m + " ";
+              }
+              m++;
+          }
+          document.getElementById("result").innerHTML += data;
+      }
+    })
+</script>
+</html>
