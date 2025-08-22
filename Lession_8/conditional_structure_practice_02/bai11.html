@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bai 10</title>
+</head>
+<body>
+<input type="number" id="tncn" placeholder="Nhập tổng thu nhập cá nhân trong năm"> <br>
+<button type="submit" id="submit">Check</button>
+<br> <br>
+<p id="result"></p>
+</body>
+<script>
+    document.getElementById("submit").addEventListener("click", function() {
+        let tncn = document.getElementById("tncn").value*1;
+        if (typeof tncn === "number") {
+            if(tncn >= 0){
+                document.getElementById("result").innerText = `Result: ${(tncn*10)/100}`;
+            }else document.getElementById("result").innerText = "Số không hợp lệ";
+        }else document.getElementById("result").innerText = "Số không hợp lệ";
+    })
+</script>
+</html>

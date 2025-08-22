@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Bai 10</title>
+</head>
+<body>
+<input type="number" id="kwh" placeholder="Nhập số điện sử dụng (kwh)"> <br>
+<input type="number" id="price" placeholder="Nhấp giá điện/kwh"> <br>
+<button type="submit" id="submit">Check</button>
+<br> <br>
+<p id="result"></p>
+</body>
+<script>
+  document.getElementById("submit").addEventListener("click", function() {
+    let kwh = document.getElementById("kwh").value*1;
+    let price = document.getElementById("price").value*1;
+    if (typeof kwh === "number" && typeof price === "number") {
+      if(kwh >= 0 && price >= 0){
+        document.getElementById("result").innerText = `Result: ${kwh*price}`;
+      }else document.getElementById("result").innerText = "Số không hợp lệ";
+    }else document.getElementById("result").innerText = "Số không hợp lệ";
+  })
+</script>
+</html>

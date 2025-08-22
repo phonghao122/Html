@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Bai 5</title>
+</head>
+<body>
+<input type="number" id="number1" placeholder="Enter a number 1"> <br>
+<input type="number" id="number2" placeholder="Enter a number 2"> <br>
+<button type="submit" id="submit">Check</button>
+<br> <br>
+<p id="result"></p>
+</body>
+<script>
+  document.getElementById("submit").addEventListener("click", function() {
+    let a = document.getElementById("number1").value*1;
+    let b = document.getElementById("number2").value*1;
+    if (typeof a === "number" && typeof b === "number") {
+      document.getElementById("result").innerText = `Result: ${(a*b)/2}`;
+    }else document.getElementById("result").innerText = "2 cạnh không hợp lệ";
+  })
+</script>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Bai 6</title>
+</head>
+<body>
+<input type="number" id="number1" placeholder="Enter a number 1"> <br>
+<input type="number" id="number2" placeholder="Enter a number 2"> <br>
+<button type="submit" id="submit">Check</button>
+<br> <br>
+<p id="result"></p>
+</body>
+<script>
+  document.getElementById("submit").addEventListener("click", function() {
+    let a = document.getElementById("number1").value*1;
+    let b = document.getElementById("number2").value*1;
+    if (typeof a === "number" && typeof b === "number") {
+      if(a === 0){
+        if(b === 0){
+          document.getElementById("result").innerText = "Phương trình vô số nghiệm";
+        }else {
+          document.getElementById("result").innerText = "Phương trình vô nghiệm";
+        }
+      }else {
+        document.getElementById("result").innerText = `Result: ${-b / a}`
+        }
+    }else document.getElementById("result").innerText = "2 số không hợp lệ";
+  })
+</script>
+</html>

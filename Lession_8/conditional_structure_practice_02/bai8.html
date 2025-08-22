@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Bai 8</title>
+</head>
+<body>
+<input type="number" id="number" placeholder="Enter a number">
+<button type="submit" id="submit">Check</button>
+<br> <br>
+<p id="result"></p>
+</body>
+<script>
+  document.getElementById("submit").addEventListener("click", function() {
+    let a = document.getElementById("number").value*1;
+    if (typeof a === "number" && a === parseInt(a,10)) {
+      if (a >=0 && a <= 120){
+        document.getElementById("result").innerText = "Tuổi hợp lệ";
+      }
+    }else document.getElementById("result").innerText = `Tuổi không hợp lệ`;
+  })
+</script>
+</html>

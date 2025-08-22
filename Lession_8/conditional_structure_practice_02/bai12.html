@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Bai 12</title>
+</head>
+<body>
+<input type="number" id="tv" placeholder="Số tiền vay"> <br>
+<input type="number" id="month" placeholder="Tháng"> <br>
+<input type="number" id="interestRate" placeholder="Lãi suất hằng tháng"> <br>
+<button type="submit" id="submit">Check</button>
+<br> <br>
+<p id="result"></p>
+</body>
+<script>
+  document.getElementById("submit").addEventListener("click", function() {
+    let tv = document.getElementById("tv").value*1;
+    let month = document.getElementById("month").value*1;
+    let ir = document.getElementById("interestRate").value*1;
+    if (typeof tv === "number" && typeof month === "number" && typeof ir === "number") {
+      if(tv >= 0 && month >= 0 && ir >=0){
+        let result = 0;
+        for (let i = 1; i <= month; i++) {
+          result = tv * ir/100;
+          tv += result;
+        }
+        document.getElementById("result").innerText = `Result: ${result}`;
+      }else document.getElementById("result").innerText = "Số không hợp lệ";
+    }else document.getElementById("result").innerText = "Số không hợp lệ";
+  })
+</script>
+</html>

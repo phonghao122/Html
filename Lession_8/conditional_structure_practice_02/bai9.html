@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Bai 9</title>
+</head>
+<body>
+<input type="number" id="number1" placeholder="Enter a number 1"> <br>
+<input type="number" id="number2" placeholder="Enter a number 2"> <br>
+<input type="number" id="number3" placeholder="Enter a number 3"> <br>
+<button type="submit" id="submit">Check</button>
+<br> <br>
+<p id="result"></p>
+</body>
+<script>
+  document.getElementById("submit").addEventListener("click", function() {
+    let a = document.getElementById("number1").value*1;
+    let b = document.getElementById("number2").value*1;
+    let c = document.getElementById("number3").value*1;
+    if (typeof a === "number" && typeof b === "number" && typeof c === "number") {
+      if(a > 0 && b > 0 && c > 0 && a+b>c && a+c>b && b+c>a){
+        document.getElementById("result").innerText = "3 số là cạnh của một tam giác";
+      }else document.getElementById("result").innerText = "3 số khong phải là cạnh của một tam giác";
+    }else document.getElementById("result").innerText = "3 số không hợp lệ";
+  })
+</script>
+</html>

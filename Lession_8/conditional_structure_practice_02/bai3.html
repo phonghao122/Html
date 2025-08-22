@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bai 3</title>
+</head>
+<body>
+<input type="number" id="number" placeholder="Enter a number">
+<button type="submit" id="submit">Check</button>
+<br> <br>
+<p id="result"></p>
+</body>
+<script>
+    document.getElementById("submit").addEventListener("click", function() {
+        let a = document.getElementById("number").value*1;
+        if (typeof a === "number") {
+            document.getElementById("result").innerText += `Result: ${a*a}`;
+        }else document.getElementById("result").innerText = `Số không hợp lệ`;
+    })
+</script>
+</html>

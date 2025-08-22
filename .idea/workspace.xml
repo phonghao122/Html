@@ -5,22 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2e75ea53-4827-4927-9ffa-9add33f2a973" name="Changes" comment="Tao CV">
-      <change afterPath="$PROJECT_DIR$/Lession_8/BMI.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lession_8/BMI.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lession_8/conditional_structure_practice_01/bai1.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lession_8/conditional_structure_practice_01/bai1.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lession_8/conditional_structure_practice_01/bai2.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lession_8/conditional_structure_practice_01/bai2.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lession_8/conditional_structure_practice_01/bai3.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lession_8/conditional_structure_practice_01/bai3.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lession_8/conditional_structure_practice_01/bai4.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lession_8/conditional_structure_practice_01/bai4.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lession_8/conditional_structure_practice_01/bai5.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lession_8/conditional_structure_practice_01/bai5.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lession_8/conditional_structure_practice_01/bai6.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lession_8/conditional_structure_practice_01/bai6.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lession_8/dayOfMonth.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lession_8/dayOfMonth.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lession_8/conditional_structure_practice_02/bai10.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lession_8/conditional_structure_practice_02/bai11.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lession_8/conditional_structure_practice_02/bai12.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lession_8/conditional_structure_practice_02/bai3.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lession_8/conditional_structure_practice_02/bai4.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lession_8/conditional_structure_practice_02/bai5.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lession_8/conditional_structure_practice_02/bai6.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lession_8/conditional_structure_practice_02/bai7.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lession_8/conditional_structure_practice_02/bai8.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lession_8/conditional_structure_practice_02/bai9.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -31,8 +25,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="HTML File" />
         <option value="JavaScript File" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -128,7 +122,8 @@
       <workItem from="1755074626969" duration="1695000" />
       <workItem from="1755084301057" duration="4891000" />
       <workItem from="1755257384739" duration="5137000" />
-      <workItem from="1755689308558" duration="7703000" />
+      <workItem from="1755689308558" duration="8341000" />
+      <workItem from="1755862418035" duration="3488000" />
     </task>
     <task id="LOCAL-00001" summary="Tao Danh Sach">
       <option name="closed" value="true" />
@@ -168,7 +163,6 @@
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/Lession_8/BMI.js</url>
           <line>1</line>
-          <properties lambdaOrdinal="-1" />
           <option name="timeStamp" value="5" />
         </line-breakpoint>
       </breakpoints>

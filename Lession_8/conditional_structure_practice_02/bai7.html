@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Bai 7</title>
+</head>
+<body>
+<input type="number" id="number1" placeholder="Enter a number 1"> <br>
+<input type="number" id="number2" placeholder="Enter a number 2"> <br>
+<input type="number" id="number3" placeholder="Enter a number 3"> <br>
+<button type="submit" id="submit">Check</button>
+<br> <br>
+<p id="result"></p>
+</body>
+<script>
+  document.getElementById("submit").addEventListener("click", function() {
+    let a = document.getElementById("number1").value*1;
+    let b = document.getElementById("number2").value*1;
+    let c = document.getElementById("number3").value*1;
+    if (typeof a === "number" && typeof b === "number" && typeof c === "number") {
+      if(a === 0){
+        if(b === 0){
+          if(c === 0){
+            document.getElementById("result").innerText = "Phương trình vô số nghiệm";
+          }else {
+            document.getElementById("result").innerText = "Phương trình vô nghiệm";
+          }
+        }else {
+          document.getElementById("result").innerText = `Phương trình có nghiệm duy nhất là: ${-c/b}`;
+        }
+      }else {
+        let delta = b*b-4*a*c;
+        if(delta < 0){
+          document.getElementById("result").innerText = "Phương trình vô nghiệm";
+        }else if(delta === 0){
+          document.getElementById("result").innerText = `Phương trình có nghiệm kép là: ${-b/(2*a)}`;
+        }else {
+          document.getElementById("result").innerText = `Phương trình có 2 nghiệm phân biệt là: ${(-b+Math.sqrt(delta))/(2*a)}, ${(-b-Math.sqrt(delta))/(2*a)}`;
+        }
+      }
+    }else document.getElementById("result").innerText = "3 số không hợp lệ";
+  })
+</script>
+</html>
