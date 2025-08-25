@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 5</title>
+</head>
+<body>
+<input type="number" id="number" placeholder="Nhập số lượng cần hiển thị">
+<button type="submit" id="submit">Sum</button>
+<br> <br>
+<div id="result">Result: </div>
+</body>
+<script>
+    document.getElementById("submit").addEventListener("click", function () {
+        let n = document.getElementById("number").value*1;
+        if (typeof n === "number") {
+            if (n > 0){
+                let count, f0, f1, f2, sum;
+                if(n === 1){
+                    document.getElementById("result").innerHTML = "0";
+                }else if (n === 2){
+                    document.getElementById("result").innerHTML = "1";
+                }else{
+                    sum = 1;
+                    count = 3;
+                    f1 = 1;
+                    f2 = 0;
+                    while (count <= n){
+                        f0 = f1 + f2;
+                        sum += f0;
+                        count++;
+                        f2 = f1;
+                        f1 = f0;
+                    }
+                    document.getElementById("result").innerHTML += sum;
+                }
+            } else document.getElementById("result").innerText = "Số phải lớn hơn 0";
+        }else document.getElementById("result").innerText = "Số không hợp lệ";
+    })
+</script>
+</html>

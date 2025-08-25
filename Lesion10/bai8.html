@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 8</title>
+</head>
+<body>
+<button id="start" type="button">Play</button>
+</body>
+<script>
+    document.getElementById("start").addEventListener('click', function(){
+        let a;
+        let random;
+        let count = 0;
+        let n = prompt("Bạn muốn đoán trong khoảng bao nhiêu số bắt đầu từ số 0",3)*1;
+        if (typeof n === "number" && n >= 3){
+            random = Math.floor(Math.random() * n);
+            do {
+                a = prompt("Nhập dự đoán của bạn", 0)*1;
+                if(typeof a === "number"){
+                    if(random === a){
+                        alert("Bạn đã đoán đúng");
+                        break;
+                    }else {
+                        count++;
+                    }
+                }
+            }while(count < 3);
+            if(count > 2){
+                alert("Bạn đã thua");
+            }
+        }else alert("Số không hợp lệ");
+
+    })
+</script>
+</html>
