@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 2</title>
+</head>
+<body>
+<input type="number" id="num1" placeholder="Nhập số cần tính giai thừa">
+<button type="button" id="btn1">Check</button>
+<br> <br>
+<p id="result">Result: </p>
+</body>
+<script>
+    document.getElementById("btn1").onclick = function () {
+        let num1 = document.getElementById("num1").value*1;
+        if(typeof num1 === "number" && num1 >= 0){
+            if(num1 === 0){
+                document.getElementById("result").innerHTML += "1";
+            }else {
+                let result = 1;
+                for (let i = num1; i >= 1; i--){
+                    result *= i;
+                }
+                document.getElementById("result").innerHTML += result;
+            }
+        }else document.getElementById("result").innerHTML += "Số không hợp lệ";
+    }
+</script>
+</html>

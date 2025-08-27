@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 3</title>
+</head>
+<body>
+<p id="result"></p>
+</body>
+<script>
+  let data = "";
+  for (let i = 0; i<5;i++){
+    let str = "";
+    for (let j = 0; j<=i;j++){
+      str+= "* ";
+    }
+    data += str + "<br>";
+  }
+  data += "<br>";
+  for (let i = 4; i>=0;i--){
+    let str = "";
+    for (let j = i; j>=0;j--){
+      str+= "* ";
+    }
+    data += str + "<br>";
+  }
+  data += "<br>";
+  for (let i = 0; i<5;i++){
+    let str = "";
+    for (let j = i; j>0;j--){
+      str+= "&nbsp&nbsp ";
+    }
+    for (let k = 5-i; k>0;k--){
+      str+= "* ";
+    }
+    data += str + "<br>";
+  }
+
+  data += "<br>";
+  for (let i = 0; i<5;i++){
+      let str = "";
+      for (let j = i; j>=0;j--){
+          str+= "* ";
+      }
+      for (let k = 5-i; k>=0;k--){
+          str+= "&nbsp&nbsp ";
+      }
+      data += str + "<br>";
+  }
+  document.getElementById("result").innerHTML += data;
+</script>
+</html>
