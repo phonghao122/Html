@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<p id="result"></p>
+</body>
+<script>
+  let str = [1,2,3,4,-4,-5,5,"abc","xyz"];
+  let v = 0;
+  let check = false;
+  for (let i = 0; i < str.length; i++) {
+    if (str[i] === v){
+      check = true;
+    }
+  }
+  if (check){
+    document.getElementById("result").innerHTML = "V is in the array";
+  }else document.getElementById("result").innerHTML = "V is not in the array";
+</script>
+</html>

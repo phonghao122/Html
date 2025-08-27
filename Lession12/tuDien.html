@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Từ điển</title>
+</head>
+<body>
+<input type="text" id="EN" placeholder="EN">
+<button type="button" id="submit">Dịch</button>
+<br> <br>
+<p id="result"></p>
+</body>
+<script>
+    document.getElementById("submit").addEventListener("click", function () {
+        let en = document.getElementById("EN").value;
+        let en_arr = ["hello", "world"];
+        let vn_arr = ["xin chào", "thế giới"];
+        let check = false;
+        for (let i = 0; i < en_arr.length; i++) {
+            if(en.toUpperCase() === en_arr[i].toUpperCase()){
+                document.getElementById("result").innerHTML = vn_arr[i];
+                check = true;
+            }
+        }
+        if (check === false) {
+            document.getElementById("result").innerHTML = "Từ không tồn tại trong từ điển";
+        }
+    });
+</script>
+</html>

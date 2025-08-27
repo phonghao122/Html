@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p id="result"></p>
+</body>
+<script>
+    let data = "";
+    let myColor = ["Red", "Green", "White", "Black"];
+    for (let  i = 0; i < myColor.length; i++){
+        data += myColor[i] + ",";
+    }
+    document.getElementById("result").innerHTML += data;
+    data += "<br>";
+
+    let a = [0,2,5,4,6,8];
+    for (let j = 0; j < a.length; j++){
+        if(a[j]%2===0 && a[j+1]%2===0){
+            a.splice(j+1,0,"-");
+            j++;
+        }
+
+    }
+    document.getElementById("result").innerHTML +="<br>" +  a;
+    data += "<br>";
+    let str = 'The Quick Brown Fox';
+    let UPPER = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+    let LOWER = 'abcdefghijklmnopqrstuvwxyz';
+
+    let result = [];
+
+    for (let x = 0; x < str.length; x++) {
+        if (UPPER.indexOf(str[x]) !== -1) {
+            result.push(str[x].toLowerCase());
+        }
+        else if (LOWER.indexOf(str[x]) !== -1) {
+            result.push(str[x].toUpperCase());
+        }
+        else {
+            result.push(str[x]);
+        }
+    }
+    document.getElementById("result").innerHTML +="<br>" + result;
+</script>
+</html>
