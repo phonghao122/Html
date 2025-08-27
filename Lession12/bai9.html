@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p id="result"></p>
+</body>
+<script>
+    let a = [1,2,3,4];
+    let b = [5,6,7,8];
+    let c = [...b,...a];
+    document.getElementById("result").innerHTML = c.join("");
+</script>
+</html>
