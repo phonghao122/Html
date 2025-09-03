@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="number" id="num" placeholder="Nhập bán kính">
+<button type="button" onclick="chuVi(document.getElementById('num').value);">Chu vi</button>
+<button type="button" onclick="dienTich(document.getElementById('num').value);">Diện tích</button>
+<p id="result"></p>
+</body>
+<script>
+  function dienTich(num){
+    return document.getElementById("result").innerHTML = `${num*num*3.14}`;
+  }
+  function chuVi(num){
+    return document.getElementById("result").innerHTML = `${num*2*3.14}`;
+  }
+</script>
+</html>

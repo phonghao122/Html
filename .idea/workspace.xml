@@ -5,11 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2e75ea53-4827-4927-9ffa-9add33f2a973" name="Changes" comment="Tao CV">
-      <change afterPath="$PROJECT_DIR$/Lession13/bai1.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lession13/bai2.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lession13/bai3.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lession13/bai4.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lession13/bai5.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lession14/bai1.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lession14/bai2.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lession14/bai3.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lession14/bai4.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lession14/bai5.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lession14/soNguyenTo.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lession15/bai1.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lession15/bai2.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -41,7 +44,7 @@
   }
 }</component>
   <component name="ProblemsViewState">
-    <option name="selectedTabId" value="DEPENDENCY_CHECKER_PROBLEMS_TAB" />
+    <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 3
@@ -51,37 +54,38 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
-    &quot;JavaScript Debug.CV.html.executor&quot;: &quot;Debug&quot;,
-    &quot;JavaScript Debug.DanhSach.html.executor&quot;: &quot;Run&quot;,
-    &quot;JavaScript Debug.ThucHanhHTMLCoBan.html.executor&quot;: &quot;Run&quot;,
-    &quot;JavaScript Debug.bai2.html.executor&quot;: &quot;Debug&quot;,
-    &quot;JavaScript Debug.currencyConverter.html.executor&quot;: &quot;Debug&quot;,
-    &quot;JavaScript Debug.hamCoSan.html.executor&quot;: &quot;Run&quot;,
-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
-    &quot;Node.js.index.js.executor&quot;: &quot;Debug&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;to.speed.mode.migration.done&quot;: &quot;true&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "DefaultHtmlFileTemplate": "HTML File",
+    "JavaScript Debug.CV.html.executor": "Debug",
+    "JavaScript Debug.DanhSach.html.executor": "Run",
+    "JavaScript Debug.ThucHanhHTMLCoBan.html.executor": "Run",
+    "JavaScript Debug.bai2.html.executor": "Debug",
+    "JavaScript Debug.bai3.html.executor": "Debug",
+    "JavaScript Debug.currencyConverter.html.executor": "Debug",
+    "JavaScript Debug.hamCoSan.html.executor": "Run",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "Node.js.index.js.executor": "Debug",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "main",
+    "junie.onboarding.icon.badge.shown": "true",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "to.speed.mode.migration.done": "true",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\HELLO\WebstormProjects\htmlbasic" />
     </key>
   </component>
-  <component name="RunManager" selected="JavaScript Debug.CV.html">
+  <component name="RunManager">
     <configuration name="CV.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/htmlbasic/CV.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
@@ -124,7 +128,8 @@
       <workItem from="1755873974086" duration="294000" />
       <workItem from="1756121380865" duration="7077000" />
       <workItem from="1756293860895" duration="8969000" />
-      <workItem from="1756468674180" duration="1345000" />
+      <workItem from="1756468674180" duration="2313000" />
+      <workItem from="1756898836208" duration="6486000" />
     </task>
     <task id="LOCAL-00001" summary="Tao Danh Sach">
       <option name="closed" value="true" />

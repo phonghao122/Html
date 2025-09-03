@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="number" id="number1" placeholder="Enter Number">
+<input type="number" id="number2" placeholder="Enter Number">
+<button id="btn" type="button" onclick="bai3(document.getElementById('number1').value, document.getElementById('number2').value)">Click</button>
+<p id="result"></p>
+</body>
+<script>
+    function bai3(num1, num2) {
+        if (num1 <= num2) {
+            return  document.getElementById("result").innerHTML = `${num1*1 + num2*1}`;
+        }else {
+            return  document.getElementById("result").innerHTML = num1 + " lớn hơn "+num2;
+        }
+    }
+</script>
+</html>
