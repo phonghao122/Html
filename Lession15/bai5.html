@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input id="num1" type="text" placeholder="Enter number A">
+<input id="num2" type="text" placeholder="Enter number B">
+<input id="num3" type="text" placeholder="Enter number C"> <br>
+<button type="button" onclick="min(document.getElementById('num1').value,
+document.getElementById('num2').value,
+document.getElementById('num3').value)">Min</button>
+<p id="result"></p>
+</body>
+<script>
+    function min(a, b, c){
+        if(!isNaN(a) && !isNaN(b) && !isNaN(c)){
+            let min = a;
+            if(a>b){
+                if(b>c){
+                    min = c;
+                }else min = b;
+            }else if(a>c){
+                min = c;
+            }
+            return document.getElementById("result").innerHTML = `Min: ${min}`;
+        }else return document.getElementById("result").innerHTML = "Số không hợp lệ";
+    }
+</script>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="number" id="num1" placeholder="Enter Number 1">
+<input type="number" id="num2" placeholder="Enter Number 2">
+<button onclick="swap(document.getElementById('num1').value,
+document.getElementById('num2').value)">Swap</button>
+<p id="result"></p>
+</body>
+<script>
+  function swap(num1, num2){
+    if(!isNaN(num1) && !isNaN(num2)){
+      let temp = num1;
+      num1 = num2;
+      num2 = temp;
+      document.getElementById("result").innerHTML = `Result: Number1 = ${num1}. Number2 = ${num2}`;
+    }else document.getElementById("result").innerHTML = "Số không hợp lệ";
+  }
+</script>
+</html>

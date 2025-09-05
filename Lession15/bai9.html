@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p id="result"></p>
+</body>
+<script>
+  let arr = "hello";
+  let k = 'm';
+  document.getElementById("result").innerHTML = `Result: ${checkCharArray(arr,k)}`;
+  function checkCharArray(arr, k){
+    let count = 0;
+    for (let i = 0; i < arr.length; i++) {
+      if (arr[i] === k) {
+        count++;
+      }
+    }
+    if (count === 0){
+      return -1;
+    }else return count;
+  }
+</script>
+</html>

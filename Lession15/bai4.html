@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" id="num" placeholder="Enter a number">
+<button type="button" onclick="kiemTraSo(document.getElementById('num').value)">Kiểm tra</button>
+<p id="result"></p>
+</body>
+<script>
+  function kiemTraSo(num) {
+    if(isNaN(num)) {
+      return document.getElementById("result").innerHTML = `Result: ${false}`;
+    }else return document.getElementById("result").innerHTML = `Result: ${true}`;
+  }
+</script>
+</html>

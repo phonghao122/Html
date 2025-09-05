@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" id="num" placeholder="Enter a number">
+<button type="button" onclick="checkInt(document.getElementById('num').value)">Check</button>
+<p id="result"></p>
+</body>
+<script>
+  function checkInt(num){
+    if(!isNaN(num)){
+      if (num > 0){
+        document.getElementById('result').innerHTML = `Result: ${true}`;
+      }else document.getElementById('result').innerHTML = `Result: ${false}`;
+    }else document.getElementById('result').innerHTML = `Số không hợp lệ`;
+  }
+</script>
+</html>

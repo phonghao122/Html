@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input id="num" type="number" placeholder="Enter a number">
+<button type="button" onclick="giaiThua(document.getElementById('num').value);">Tính giai thừa</button>
+<p id="result"></p>
+</body>
+<script>
+    function giaiThua(num){
+        let result = 1;
+        for (let i = 1; i <= num; i++) {
+            result *= i;
+        }
+        return document.getElementById("result").innerHTML = `Result: ${result}`;
+    }
+</script>
+</html>
