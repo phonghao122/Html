@@ -5,13 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2e75ea53-4827-4927-9ffa-9add33f2a973" name="Changes" comment="Tao CV">
-      <change afterPath="$PROJECT_DIR$/Lession15/bai3.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lession15/bai4.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lession15/bai5.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lession15/bai6.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lession15/bai7.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lession15/bai8.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lession15/bai9.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lession16/hinhChuNhat.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lession16/temperature.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -131,7 +126,7 @@
       <workItem from="1756293860895" duration="8969000" />
       <workItem from="1756468674180" duration="2313000" />
       <workItem from="1756898836208" duration="6821000" />
-      <workItem from="1757072271112" duration="3096000" />
+      <workItem from="1757072271112" duration="6225000" />
     </task>
     <task id="LOCAL-00001" summary="Tao Danh Sach">
       <option name="closed" value="true" />
