@@ -9,27 +9,27 @@
 <p id="demo"></p>
 </body>
 <script>
-    function Rectangle(width, length) {
-        this.width = width;
-        this.length = length;
-        this.acreage = function (){
+    class Rectangle{
+        constructor(width, length) {
+            this.width = width;
+            this.length = length;
+        }
+
+        acreage(){
             return this.width * this.length;
-        };
-        this.perimeter = function (){
-            return (this.width + this.length) / 2;
-        };
+        }
+        perimeter(){
+            return (this.width + this.length) * 2;
+        }
     }
 
-    function createRectangle(){
-        let ctx = document.getElementById("myCanvas").getContext("2d");
-        let rect = new Rectangle(200, 400);
-        rect.width = 20;
-        rect.height = 40;
-        ctx.beginPath();
-        ctx.arc(0,0, rect.width, rect.length, rect.acreage());
-        document.getElementById("demo").innerHTML = `Chu vi: ${rect.perimeter()}. Diện tích: ${rect.acreage()}.`;
-    }
-    createRectangle();
+    let ctx = document.getElementById("myCanvas").getContext("2d");
+    let rect = new Rectangle(200, 400);
+    rect.width = 20;
+    rect.height = 40;
+    ctx.beginPath();
+    ctx.arc(0,0, rect.width, rect.length, rect.acreage());
+    document.getElementById("demo").innerHTML = `Chu vi: ${rect.perimeter()}. Diện tích: ${rect.acreage()}.`;
 
 </script>
 </html>

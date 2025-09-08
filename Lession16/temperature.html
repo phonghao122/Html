@@ -8,17 +8,21 @@
 <p id="demo"></p>
 </body>
 <script>
-  function Temperature(c){
-    this.c = c;
-    this.f = function (){
-      return (this.c * 1.8) + 32;
+  class Temperature{
+    constructor(c) {
+        this.c = c;
     }
-    this.k = function(){
-      return this.c + 273.15;
+    f(){
+        return (this.c * 1.8) + 32;
+    }
+    k(){
+        return this.c + 273.15;
     }
   }
   let temperature = new Temperature(25);
   let f = temperature.f;
+  console.log(f);
   let k = temperature.k;
+  console.log(k);
 </script>
 </html>
