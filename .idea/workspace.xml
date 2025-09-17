@@ -5,8 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2e75ea53-4827-4927-9ffa-9add33f2a973" name="Changes" comment="Tao CV">
-      <change afterPath="$PROJECT_DIR$/Lession17/AdamEva.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lession17/CongTac&amp;BongDen.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CaseStudy/QuanLyBuuPham.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -55,6 +54,7 @@
     "JavaScript Debug.CV.html.executor": "Debug",
     "JavaScript Debug.CongTac&BongDen.html.executor": "Debug",
     "JavaScript Debug.DanhSach.html.executor": "Run",
+    "JavaScript Debug.QuanLyBuuPham.html.executor": "Run",
     "JavaScript Debug.ThucHanhHTMLCoBan.html.executor": "Run",
     "JavaScript Debug.bai2.html.executor": "Debug",
     "JavaScript Debug.bai3.html.executor": "Debug",
@@ -83,11 +83,14 @@
       <recent name="C:\Users\HELLO\WebstormProjects\htmlbasic" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="JavaScript Debug.QuanLyBuuPham.html">
     <configuration name="CV.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/htmlbasic/CV.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
     <configuration name="DanhSach.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/htmlbasic/DanhSach.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
+    <configuration name="QuanLyBuuPham.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/htmlbasic/CaseStudy/QuanLyBuuPham.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
     <configuration name="ThucHanhHTMLCoBan.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/htmlbasic/ThucHanhHTMLCoBan.html" useBuiltInWebServerPort="true">
@@ -95,6 +98,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JavaScript Debug.QuanLyBuuPham.html" />
         <item itemvalue="JavaScript Debug.CV.html" />
         <item itemvalue="JavaScript Debug.DanhSach.html" />
         <item itemvalue="JavaScript Debug.ThucHanhHTMLCoBan.html" />
@@ -130,7 +134,10 @@
       <workItem from="1756898836208" duration="6821000" />
       <workItem from="1757072271112" duration="6225000" />
       <workItem from="1757163110259" duration="108000" />
-      <workItem from="1757332540021" duration="3586000" />
+      <workItem from="1757332540021" duration="6540000" />
+      <workItem from="1757512908041" duration="856000" />
+      <workItem from="1757678297025" duration="643000" />
+      <workItem from="1757937050721" duration="9092000" />
     </task>
     <task id="LOCAL-00001" summary="Tao Danh Sach">
       <option name="closed" value="true" />

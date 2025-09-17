@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+  class BuuPham {
+    get status() {
+      return this._status;
+    }
+
+    set status(value) {
+      this._status = value;
+    }
+    constructor(id, address, tenNguoiNhan, status) {
+      this._id = id;
+      this._address = address;
+      this._tenNguoiNhan = tenNguoiNhan;
+      this._address = address;
+      this._status = status;
+    }
+
+    get address() {
+      return this._address;
+    }
+
+    set address(value) {
+      this._address = value;
+    }
+
+    get tenNguoiNhan() {
+      return this._tenNguoiNhan;
+    }
+
+    set tenNguoiNhan(value) {
+      this._tenNguoiNhan = value;
+    }
+
+    get id() {
+      return this._id;
+    }
+
+    set id(value) {
+      this._id = value;
+    }
+  }
+
+  class Thu extends BuuPham {
+    constructor(id, address, tenNguoiNhan, status, loaiThu) {
+      super(id, address, tenNguoiNhan, status);
+      this._loaiThu = loaiThu;
+    }
+
+    get loaiThu() {
+      return this._loaiThu;
+    }
+
+    set loaiThu(value) {
+      this._loaiThu = value;
+    }
+
+    tinhPhiVanChuyen(){
+      if (this._loaiThu === 0){
+        return 500;
+      }else return 3000;
+    }
+  }
+  class HangHoa extends BuuPham {
+    constructor(id, address, tenNguoiNhan, status, trongLuong) {
+      super(id, address, tenNguoiNhan, status);
+      this._trongLuong = trongLuong;
+    }
+
+    get trongLuong() {
+      return this._trongLuong;
+    }
+
+    set trongLuong(value) {
+      this._trongLuong = value;
+    }
+
+    tinhPhiVanChuyen(){
+      return this._trongLuong*10000;
+    }
+  }
+  class QuanLyBuuPham {
+    constructor(buuPham) {
+      this._buuPham = buuPham;
+    }
+    disPlayBuuPham() {
+      for(let i = 0; i < this._buuPham.length; i++) {
+        if(this._buuPham[i] instanceof Thu) {
+          let thu = "";
+          if(this._buuPham[i].loaiThu === 0){thu = "thuong";}else{thu = "nhanh";}
+          console.log(`id: ${this._buuPham[i].id}, address ${this._buuPham[i].address}, ten nguoi nhan: ${this._buuPham[i].tenNguoiNhan},
+         loai thu: ${thu}, phi van chuyen: ${this._buuPham[i].tinhPhiVanChuyen()}, Status: ${this._buuPham[i].status}`);
+        }
+        if(this._buuPham[i] instanceof HangHoa) {
+          console.log(`id: ${this._buuPham[i].id}, address ${this._buuPham[i].address}, ten nguoi nhan: ${this._buuPham[i].tenNguoiNhan},
+         trong luong: ${this._buuPham[i].trongLuong}, phi van chuyen: ${this._buuPham[i].tinhPhiVanChuyen()}, Status: ${this._buuPham[i].status}`);
+        }
+      }
+    }
+    themThu(id, address, tenNguoiNhan, status, loaiThu) {
+      let thu = new Thu(id, address, tenNguoiNhan, status, loaiThu);
+      this._buuPham.push(thu);
+    }
+
+    suaThu(id, address, tenNguoiNhan, status, loaiThu){
+      for (let i = 0; i < this._buuPham.length; i++) {
+        if(this._buuPham[i].id === id){
+          this._buuPham[i].address = address;
+          this._buuPham[i].tenNguoiNhan = tenNguoiNhan;
+          this._buuPham[i].loaiThu = loaiThu;
+          this._buuPham[i].status = status;
+          break;
+        }
+      }
+    }
+
+    xoaThu(id){
+      for (let i = 0; i < this._buuPham.length; i++) {
+        if(this._buuPham[i].id === id){
+          this._buuPham.splice(i,1);
+          break;
+        }
+      }
+    }
+
+    themHangHoa(id, address, tenNguoiNhan, status, trongLuong) {
+      let thu = new HangHoa(id, address, tenNguoiNhan, status, trongLuong);
+      this._buuPham.push(thu);
+    }
+
+    suaHangHoa(id, address, tenNguoiNhan, status, trongLuong) {
+      for (let i = 0; i < this._buuPham.length; i++) {
+        if(this._buuPham[i].id === id){
+          this._buuPham[i].address = address;
+          this._buuPham[i].tenNguoiNhan = tenNguoiNhan;
+          this._buuPham[i].trongLuong = trongLuong;
+          this._buuPham[i].status = status;
+          break;
+        }
+      }
+    }
+
+    xoaHangHoa(id){
+      for (let i = 0; i < this._buuPham.length; i++) {
+        if(this._buuPham[i].id === id){
+          this._buuPham.splice(i,1);
+          break;
+        }
+      }
+    }
+  }
+  let buuPham = [];
+  let quanLyBuuPham = new QuanLyBuuPham(buuPham);
+  quanLyBuuPham.themThu(1,"dn","max",false, 0);
+  quanLyBuuPham.themHangHoa(2,"bd","bi",false, 10);
+  quanLyBuuPham.themThu(3,"hn","bin",false, 1);
+  quanLyBuuPham.themHangHoa(4,"hcm","laura",false, 20);
+  quanLyBuuPham.disPlayBuuPham();
+  quanLyBuuPham.suaHangHoa(2,"aa","bi",false, 15);
+  quanLyBuuPham.suaThu(3,"hn","bin",false, 0);
+  quanLyBuuPham.disPlayBuuPham();
+  quanLyBuuPham.xoaThu(1);
+  quanLyBuuPham.xoaHangHoa(2);
+  quanLyBuuPham.disPlayBuuPham();
+</script>
+</html>
