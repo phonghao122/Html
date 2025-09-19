@@ -5,6 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2e75ea53-4827-4927-9ffa-9add33f2a973" name="Changes" comment="Tao CV">
+      <change afterPath="$PROJECT_DIR$/CaseStudy/index.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CaseStudy/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CaseStudy/QuanLyBuuPham.html" beforeDir="false" afterPath="$PROJECT_DIR$/CaseStudy/QuanLyBuuPham.html" afterDir="false" />
     </list>
@@ -16,8 +18,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="JavaScript File" />
         <option value="HTML File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -47,37 +49,37 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "DefaultHtmlFileTemplate": "HTML File",
-    "JavaScript Debug.AdamEva.html.executor": "Debug",
-    "JavaScript Debug.CV.html.executor": "Debug",
-    "JavaScript Debug.CongTac&BongDen.html.executor": "Debug",
-    "JavaScript Debug.DanhSach.html.executor": "Run",
-    "JavaScript Debug.QuanLyBuuPham.html.executor": "Debug",
-    "JavaScript Debug.ThucHanhHTMLCoBan.html.executor": "Run",
-    "JavaScript Debug.bai2.html.executor": "Debug",
-    "JavaScript Debug.bai3.html.executor": "Debug",
-    "JavaScript Debug.bai5.html.executor": "Debug",
-    "JavaScript Debug.currencyConverter.html.executor": "Debug",
-    "JavaScript Debug.hamCoSan.html.executor": "Run",
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "Node.js.index.js.executor": "Debug",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "main",
-    "ignore.virus.scanning.warn.message": "true",
-    "junie.onboarding.icon.badge.shown": "true",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "to.speed.mode.migration.done": "true",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;JavaScript Debug.AdamEva.html.executor&quot;: &quot;Debug&quot;,
+    &quot;JavaScript Debug.CV.html.executor&quot;: &quot;Debug&quot;,
+    &quot;JavaScript Debug.CongTac&amp;BongDen.html.executor&quot;: &quot;Debug&quot;,
+    &quot;JavaScript Debug.DanhSach.html.executor&quot;: &quot;Run&quot;,
+    &quot;JavaScript Debug.QuanLyBuuPham.html.executor&quot;: &quot;Debug&quot;,
+    &quot;JavaScript Debug.ThucHanhHTMLCoBan.html.executor&quot;: &quot;Run&quot;,
+    &quot;JavaScript Debug.bai2.html.executor&quot;: &quot;Debug&quot;,
+    &quot;JavaScript Debug.bai3.html.executor&quot;: &quot;Debug&quot;,
+    &quot;JavaScript Debug.bai5.html.executor&quot;: &quot;Debug&quot;,
+    &quot;JavaScript Debug.currencyConverter.html.executor&quot;: &quot;Debug&quot;,
+    &quot;JavaScript Debug.hamCoSan.html.executor&quot;: &quot;Run&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;Node.js.index.js.executor&quot;: &quot;Debug&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;to.speed.mode.migration.done&quot;: &quot;true&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\HELLO\WebstormProjects\htmlbasic" />
@@ -139,6 +141,7 @@
       <workItem from="1757678297025" duration="643000" />
       <workItem from="1757937050721" duration="9092000" />
       <workItem from="1758108608514" duration="10628000" />
+      <workItem from="1758281381230" duration="3153000" />
     </task>
     <task id="LOCAL-00001" summary="Tao Danh Sach">
       <option name="closed" value="true" />

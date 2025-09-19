@@ -1,0 +1,96 @@
+
+    /* Reset cơ bản */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", Tahoma, sans-serif;
+}
+
+body {
+    background: #f4f6f9;
+    color: #333;
+    padding: 20px;
+}
+
+/* Tiêu đề */
+h1 {
+    background: #324dff;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    font-size: 26px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+}
+
+/* Bảng chứa các khu vực quản lý */
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+td {
+    vertical-align: top;
+    padding: 15px;
+    width: 33%;
+}
+
+/* Các khối chức năng */
+td > div {
+    background: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* Nút bấm */
+button {
+    background: #324dff;
+    color: white;
+    border: none;
+    padding: 10px 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 15px;
+    transition: 0.2s;
+}
+
+button:hover {
+    background: #2536c8;
+}
+
+/* Input & Select */
+input, select {
+    width: 95%;
+    padding: 8px 10px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 14px;
+    transition: 0.2s;
+}
+
+input:focus, select:focus {
+    border-color: #324dff;
+    outline: none;
+    box-shadow: 0 0 5px rgba(50,77,255,0.4);
+}
+
+/* Kết quả hiển thị */
+#result, #editResult, #delResult, #display {
+    margin-top: 10px;
+    padding: 10px;
+    background: #eef1ff;
+    border: 1px solid #d0d5ff;
+    border-radius: 6px;
+    font-size: 14px;
+    color: #333;
+    min-height: 20px;
+}
+
+/* Hiển thị các form con */
+#them, #sua, #xoa {
+    margin-top: 10px;
+}
