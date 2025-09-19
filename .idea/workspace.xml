@@ -5,8 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2e75ea53-4827-4927-9ffa-9add33f2a973" name="Changes" comment="Tao CV">
-      <change afterPath="$PROJECT_DIR$/CaseStudy/QuanLyBuuPham.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CaseStudy/QuanLyBuuPham.html" beforeDir="false" afterPath="$PROJECT_DIR$/CaseStudy/QuanLyBuuPham.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,7 +54,7 @@
     "JavaScript Debug.CV.html.executor": "Debug",
     "JavaScript Debug.CongTac&BongDen.html.executor": "Debug",
     "JavaScript Debug.DanhSach.html.executor": "Run",
-    "JavaScript Debug.QuanLyBuuPham.html.executor": "Run",
+    "JavaScript Debug.QuanLyBuuPham.html.executor": "Debug",
     "JavaScript Debug.ThucHanhHTMLCoBan.html.executor": "Run",
     "JavaScript Debug.bai2.html.executor": "Debug",
     "JavaScript Debug.bai3.html.executor": "Debug",
@@ -138,6 +138,7 @@
       <workItem from="1757512908041" duration="856000" />
       <workItem from="1757678297025" duration="643000" />
       <workItem from="1757937050721" duration="9092000" />
+      <workItem from="1758108608514" duration="10628000" />
     </task>
     <task id="LOCAL-00001" summary="Tao Danh Sach">
       <option name="closed" value="true" />
