@@ -1,42 +1,17 @@
 class BuuPham {
-    get status() {
-        return this._status;
-    }
-
-    set status(value) {
-        this._status = value;
-    }
     constructor(id, address, tenNguoiNhan, status) {
         this._id = id;
         this._address = address;
         this._tenNguoiNhan = tenNguoiNhan;
-        this._address = address;
         this._status = status;
     }
-
-    get address() {
-        return this._address;
-    }
-
-    set address(value) {
-        this._address = value;
-    }
-
-    get tenNguoiNhan() {
-        return this._tenNguoiNhan;
-    }
-
-    set tenNguoiNhan(value) {
-        this._tenNguoiNhan = value;
-    }
-
-    get id() {
-        return this._id;
-    }
-
-    set id(value) {
-        this._id = value;
-    }
+    get id() { return this._id; }
+    get address() { return this._address; }
+    set address(val) { this._address = val; }
+    get tenNguoiNhan() { return this._tenNguoiNhan; }
+    set tenNguoiNhan(val) { this._tenNguoiNhan = val; }
+    get status() { return this._status; }
+    set status(val) { this._status = val; }
 }
 
 class Thu extends BuuPham {
@@ -44,241 +19,165 @@ class Thu extends BuuPham {
         super(id, address, tenNguoiNhan, status);
         this._loaiThu = loaiThu;
     }
-
-    get loaiThu() {
-        return this._loaiThu;
-    }
-
-    set loaiThu(value) {
-        this._loaiThu = value;
-    }
-
-    tinhPhiVanChuyen(){
-        if (this._loaiThu === 0){
-            return 500;
-        }else return 3000;
-    }
+    get loaiThu() { return this._loaiThu; }
+    set loaiThu(val) { this._loaiThu = val; }
+    tinhPhiVanChuyen() { return this._loaiThu === 0 ? 500 : 3000; }
 }
+
 class HangHoa extends BuuPham {
     constructor(id, address, tenNguoiNhan, status, trongLuong) {
         super(id, address, tenNguoiNhan, status);
         this._trongLuong = trongLuong;
     }
-
-    get trongLuong() {
-        return this._trongLuong;
-    }
-
-    set trongLuong(value) {
-        this._trongLuong = value;
-    }
-
-    tinhPhiVanChuyen(){
-        return this._trongLuong*10000;
-    }
+    get trongLuong() { return this._trongLuong; }
+    set trongLuong(val) { this._trongLuong = val; }
+    tinhPhiVanChuyen() { return this._trongLuong * 10000; }
 }
-class QuanLyBuuPham {
-    get buuPham() {
-        return this._buuPham;
-    }
 
-    set buuPham(value) {
-        this._buuPham = value;
+class QuanLyBuuPham {
+    constructor() { this._buuPham = []; this.nextId = 1; }
+    themThu(address, tenNguoiNhan, loaiThu) {
+        let bp = new Thu(this.nextId++, address, tenNguoiNhan, false, loaiThu);
+        this._buuPham.push(bp);
     }
-    constructor(buuPham) {
-        this._buuPham = buuPham;
+    themHangHoa(address, tenNguoiNhan, trongLuong) {
+        let bp = new HangHoa(this.nextId++, address, tenNguoiNhan, false, trongLuong);
+        this._buuPham.push(bp);
+    }
+    suaThu(id, address, tenNguoiNhan, status, loaiThu) {
+        let bp = this._buuPham.find(b => b.id == id);
+        if (bp instanceof Thu) {
+            bp.address = address;
+            bp.tenNguoiNhan = tenNguoiNhan;
+            bp.loaiThu = loaiThu;
+            bp.status = status;
+        }
+    }
+    suaHangHoa(id, address, tenNguoiNhan, status, trongLuong) {
+        let bp = this._buuPham.find(b => b.id == id);
+        if (bp instanceof HangHoa) {
+            bp.address = address;
+            bp.tenNguoiNhan = tenNguoiNhan;
+            bp.trongLuong = trongLuong;
+            bp.status = status;
+        }
+    }
+    xoaBuuPham(id) {
+        this._buuPham = this._buuPham.filter(b => b.id != id);
     }
     disPlayBuuPham() {
-        let data = "";
-        for(let i = 0; i < this._buuPham.length; i++) {
-            if(this._buuPham[i] instanceof Thu) {
-                let thu = "";
-                if(this._buuPham[i].loaiThu === 0){thu = "Thường";}else{thu = "Nhanh";}
-                data += `id: ${this._buuPham[i].id}, Địa chỉ nhận hàng: ${this._buuPham[i].address}, Người Nhận: ${this._buuPham[i].tenNguoiNhan},
-         Loại Thư: ${thu}, Phí Vận Chuyển: ${this._buuPham[i].tinhPhiVanChuyen()}, Status: ${this._buuPham[i].status} <br>`;
-            }
-            if(this._buuPham[i] instanceof HangHoa) {
-                data += `id: ${this._buuPham[i].id}, Địa chỉ nhận hàng: ${this._buuPham[i].address}, Người Nhận: ${this._buuPham[i].tenNguoiNhan},
-         Trọng Lượng: ${this._buuPham[i].trongLuong}, Phí Vận Chuyển: ${this._buuPham[i].tinhPhiVanChuyen()}, Status: ${this._buuPham[i].status} <br>`;
-            }
+        let html = `<tr>
+            <th>ID</th><th>Địa Chỉ Nhận Hàng</th><th>Người Nhận</th>
+            <th>Phí Vận Chuyển</th><th>Thông Tin Khác</th><th>Trạng Thái</th><th>Khác</th>
+          </tr>`;
+        if (this._buuPham.length === 0) {
+            html += `<tr><td colspan="7">Chưa có bưu phẩm nào</td></tr>`;
+        } else {
+            this._buuPham.forEach(bp => {
+                let status = bp.status ? "✅" : "❌";
+                if (bp instanceof Thu) {
+                    let loai = bp.loaiThu === 0 ? "Thường" : "Nhanh";
+                    html += `<tr>
+                <td>${bp.id}</td><td>${bp.address}</td><td>${bp.tenNguoiNhan}</td>
+                <td>${bp.tinhPhiVanChuyen()}</td><td>Loại Thư: ${loai}</td><td>${status}</td>
+                <td>
+                  <button onclick="displayEdit(${bp.id})">✏️</button>
+                  <button onclick="displayDel(${bp.id})">🗑️</button>
+                </td></tr>`;
+                } else if (bp instanceof HangHoa) {
+                    html += `<tr>
+                <td>${bp.id}</td><td>${bp.address}</td><td>${bp.tenNguoiNhan}</td>
+                <td>${bp.tinhPhiVanChuyen()}</td><td>Trọng lượng: ${bp.trongLuong}kg</td><td>${status}</td>
+                <td>
+                  <button onclick="displayEdit(${bp.id})">✏️</button>
+                  <button onclick="displayDel(${bp.id})">🗑️</button>
+                </td></tr>`;
+                }
+            });
         }
-        return data;
-    }
-    themThu(id, address, tenNguoiNhan, status, loaiThu) {
-        let thu = new Thu(id, address, tenNguoiNhan, status, loaiThu);
-        this._buuPham.push(thu);
-    }
-
-    suaThu(id, address, tenNguoiNhan, status, loaiThu){
-        for (let i = 0; i < this._buuPham.length; i++) {
-            if(this._buuPham[i].id === id){
-                this._buuPham[i].address = address;
-                this._buuPham[i].tenNguoiNhan = tenNguoiNhan;
-                this._buuPham[i].loaiThu = loaiThu;
-                this._buuPham[i].status = status;
-                break;
-            }
-        }
-    }
-
-    themHangHoa(id, address, tenNguoiNhan, status, trongLuong) {
-        let thu = new HangHoa(id, address, tenNguoiNhan, status, trongLuong);
-        this._buuPham.push(thu);
-    }
-
-    suaHangHoa(id, address, tenNguoiNhan, status, trongLuong) {
-        for (let i = 0; i < this._buuPham.length; i++) {
-            if(this._buuPham[i].id === id){
-                this._buuPham[i].address = address;
-                this._buuPham[i].tenNguoiNhan = tenNguoiNhan;
-                this._buuPham[i].trongLuong = trongLuong;
-                this._buuPham[i].status = status;
-                break;
-            }
-        }
-    }
-
-    xoaBuuPham(id){
-        for (let i = 0; i < this._buuPham.length; i++) {
-            if(this._buuPham[i].id === id){
-                this._buuPham.splice(i,1);
-                break;
-            }
-        }
-    }
-
-    updateStatus(id) {
-        for (let i = 0; i < this._buuPham.length; i++) {
-            if(this._buuPham[i].id === id){
-                this._buuPham[i].status = true;
-            }
-        }
+        document.getElementById("display").innerHTML = html;
     }
 }
-let buuPham = [];
-let quanLyBuuPham = new QuanLyBuuPham(buuPham);
-document.getElementById("add").addEventListener("click", function(){
-    document.getElementById("them").style.display = "block";
-    document.getElementById("sua").style.display = "none";
-    document.getElementById("xoa").style.display = "none";
-})
-let loaibp;
-document.getElementById("loaiBP").addEventListener("change", function(){
-    loaibp = document.getElementById("loaiBP").value*1;
-    if(loaibp === 0){
-        document.getElementById("addThu").setAttribute("style", "display:block");
-        document.getElementById("addHangHoa").setAttribute("style", "display:none");
-    }
-    if(loaibp === 1){
-        document.getElementById("addHangHoa").setAttribute("style", "display:block");
-        document.getElementById("addThu").setAttribute("style", "display:none");
-    }
-})
-document.getElementById("themThu").addEventListener("click", function(){
-    let id = 0;
-    let address = document.getElementById("addAddressThu").value;
-    let nguoiNhan = document.getElementById("addNguoiNhanThu").value;
-    let loaiThu = document.getElementById("addLoaiThu").value*1;
-    if(quanLyBuuPham.buuPham.length === 0){
-        quanLyBuuPham.themThu(id,address, nguoiNhan, false, loaiThu);
-        alert("Thêm Thành Công");
-        document.getElementById("display").innerHTML = quanLyBuuPham.disPlayBuuPham();
-    }else {
-        id = quanLyBuuPham.buuPham.length;
-        quanLyBuuPham.themThu(id,address, nguoiNhan, false, loaiThu);
-        alert("Thêm Thành Công");
-        document.getElementById("display").innerHTML = quanLyBuuPham.disPlayBuuPham();
-    }
-})
-document.getElementById("themHangHoa").addEventListener("click", function(){
-    let id = 0;
-    let address = document.getElementById("addAddressHH").value;
-    let nguoiNhan = document.getElementById("addnguoiNhanHH").value;
-    let trongLuong = document.getElementById("addTrongLuong").value*1;
-    if(quanLyBuuPham.buuPham.length === 0){
-        quanLyBuuPham.themHangHoa(id,address, nguoiNhan, false, trongLuong);
-        alert("Thêm Thành Công");
-        document.getElementById("display").innerHTML = quanLyBuuPham.disPlayBuuPham();
-    }else {
-        id = quanLyBuuPham.buuPham.length;
-        quanLyBuuPham.themHangHoa(id,address, nguoiNhan, false, trongLuong);
-        alert("Thêm Thành Công");
-        document.getElementById("display").innerHTML = quanLyBuuPham.disPlayBuuPham();
-    }
-})
 
+// ===== Biến toàn cục =====
+let ql = new QuanLyBuuPham();
 
-document.getElementById("edit").addEventListener("click", function(){
-    document.getElementById("them").style.display = "none";
-    document.getElementById("sua").style.display = "block";
-    document.getElementById("xoa").style.display = "none";
-})
-let editId;
-document.getElementById("editId").addEventListener("change", function(){
-    editId = document.getElementById("editId").value*1;
-    let check = false;
-    for (let i =0;i<quanLyBuuPham.buuPham.length;i++){
-        if(quanLyBuuPham.buuPham[i].id === editId){
-            check = true;
-            document.getElementById("editResult").style.display = "none";
-            if (quanLyBuuPham.buuPham[i] instanceof Thu){
-                document.getElementById("suaThu").style.display = "block";
-                document.getElementById("suaHangHoa").style.display = "none";
-                break;
-            }
-            if (quanLyBuuPham.buuPham[i] instanceof HangHoa){
-                document.getElementById("suaHangHoa").style.display = "block";
-                document.getElementById("suaThu").style.display = "none";
-                break;
-            }
-        }
-    }
-    if(!check){
-        document.getElementById("editResult").innerText = "Bưu phẩm không tồn tại";
-    }
-})
-document.getElementById("editThu").addEventListener("click", function(){
-    let address = document.getElementById("editAddressThu").value;
-    let nguoiNhan = document.getElementById("editNguoiNhanThu").value;
-    let loaiThu = document.getElementById("editLoaiThu").value*1;
-    let status = document.getElementById("editStatusThu").value;
-    if(status === "null"){
-        status = quanLyBuuPham.buuPham[editId].status;
-        quanLyBuuPham.suaThu(editId,address, nguoiNhan, status, loaiThu);
-    }else {
-        quanLyBuuPham.suaThu(editId,address, nguoiNhan, status, loaiThu);
-    }
-    alert("Sửa Thành Công");
-    document.getElementById("display").innerHTML = quanLyBuuPham.disPlayBuuPham();
-})
-document.getElementById("editHH").addEventListener("click", function(){
-    let address = document.getElementById("editAddressHH").value;
-    let nguoiNhan = document.getElementById("editnguoiNhanHH").value;
-    let trongLuong = document.getElementById("editTrongLuong").value*1;
-    let status = document.getElementById("editStatusHH").value;
-    quanLyBuuPham.suaHangHoa(editId,address, nguoiNhan, status, trongLuong);
-    alert("Sửa Thành Công");
-    document.getElementById("display").innerHTML = quanLyBuuPham.disPlayBuuPham();
-})
+// ===== Modal thêm =====
+const addModal = document.getElementById("addModal");
+document.getElementById("btnAddTop").onclick = () => addModal.style.display = "flex";
+document.getElementById("btnAddBottom").onclick = () => addModal.style.display = "flex";
+document.getElementById("closeAdd").onclick = () => addModal.style.display = "none";
 
+document.getElementById("loaiBP").onchange = (e) => {
+    document.getElementById("addThu").style.display = (e.target.value === "0") ? "block" : "none";
+    document.getElementById("addHangHoa").style.display = (e.target.value === "1") ? "block" : "none";
+};
 
-document.getElementById("delete").addEventListener("click", function(){
-    document.getElementById("xoa").style.display = "block";
-    document.getElementById("them").style.display = "none";
-    document.getElementById("sua").style.display = "none";
-})
-let delId;
-document.getElementById("delId").addEventListener("change", function(){
-    delId = document.getElementById("delId").value*1;
-    for (let i =0;i<quanLyBuuPham.buuPham.length;i++){
-        if(quanLyBuuPham.buuPham[i].id === delId){
-            document.getElementById("delResult").innerHTML = "Bưu phẩm có tồn tại";
-            document.getElementById("delBP").style.display = "block";
-        }else document.getElementById("delResult").innerHTML = "Bưu phẩm không tồn tại";
+document.getElementById("themThu").onclick = () => {
+    let name = document.getElementById("addNguoiNhanThu").value;
+    let addr = document.getElementById("addAddressThu").value;
+    let loai = +document.getElementById("addLoaiThu").value;
+    ql.themThu(addr, name, loai);
+    ql.disPlayBuuPham();
+    addModal.style.display = "none";
+};
+
+document.getElementById("themHangHoa").onclick = () => {
+    let name = document.getElementById("addnguoiNhanHH").value;
+    let addr = document.getElementById("addAddressHH").value;
+    let w = +document.getElementById("addTrongLuong").value;
+    ql.themHangHoa(addr, name, w);
+    ql.disPlayBuuPham();
+    addModal.style.display = "none";
+};
+
+// ===== Modal sửa =====
+const editModal = document.getElementById("editModal");
+document.getElementById("closeEdit").onclick = () => editModal.style.display = "none";
+
+function displayEdit(id) {
+    let bp = ql._buuPham.find(b => b.id == id);
+    if (!bp) return;
+    document.getElementById("editId").value = bp.id;
+    document.getElementById("editNguoiNhan").value = bp.tenNguoiNhan;
+    document.getElementById("editAddress").value = bp.address;
+    document.getElementById("editStatus").checked = bp.status;
+    if (bp instanceof Thu) {
+        document.getElementById("editLoaiThuBox").style.display = "block";
+        document.getElementById("editTrongLuongBox").style.display = "none";
+        document.getElementById("editLoaiThu").value = bp.loaiThu;
+    } else {
+        document.getElementById("editLoaiThuBox").style.display = "none";
+        document.getElementById("editTrongLuongBox").style.display = "block";
+        document.getElementById("editTrongLuong").value = bp.trongLuong;
     }
-})
-document.getElementById("delBP").addEventListener("click", function(){
-    quanLyBuuPham.xoaBuuPham(delId);
-    alert("Xóa Thành Công");
-    document.getElementById("display").innerHTML = quanLyBuuPham.disPlayBuuPham();
-})
+    editModal.style.display = "flex";
+}
+
+document.getElementById("btnSaveEdit").onclick = () => {
+    let id = +document.getElementById("editId").value;
+    let name = document.getElementById("editNguoiNhan").value;
+    let addr = document.getElementById("editAddress").value;
+    let status = document.getElementById("editStatus").checked;
+    let bp = ql._buuPham.find(b => b.id == id);
+    if (bp instanceof Thu) {
+        let loai = +document.getElementById("editLoaiThu").value;
+        ql.suaThu(id, addr, name, status, loai);
+    } else {
+        let w = +document.getElementById("editTrongLuong").value;
+        ql.suaHangHoa(id, addr, name, status, w);
+    }
+    ql.disPlayBuuPham();
+    editModal.style.display = "none";
+};
+
+// ===== Xóa =====
+function displayDel(id) {
+    if (confirm("Bạn có chắc muốn xóa?")) {
+        ql.xoaBuuPham(id);
+        ql.disPlayBuuPham();
+    }
+}
+
+// ===== Khởi tạo =====
+ql.disPlayBuuPham();

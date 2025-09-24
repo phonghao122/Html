@@ -1,93 +1,77 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="vi">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Quản Lý Bưu Phẩm</title>
     <link rel="stylesheet" href="index.css">
 </head>
 <body>
-<h1 style="background-color: #324dff; color: white;">Quản Lý Bưu Phẩm</h1>
-<table style="width: 100%;">
-    <tr>
-        <td colspan="4" id="display" ></td>
-    </tr>
-    <tr>
-        <td>
-            <button id="add">Thêm Bưu Phẩm</button>
-            <br> <br>
-            <div id="them" style="display: none;">
-                <select id="loaiBP">
-                    <option value="2">Chọn loại bưu phẩm</option>
-                    <option value="0">Thư</option>
-                    <option value="1">Hàng Hóa</option>
-                </select><br>
-                <div id="addThu" style="display: none">
-                    <input id="addNguoiNhanThu" placeholder="Tên người nhận"><br>
-                    <input id="addAddressThu" placeholder="Địa chỉ nhận hàng"><br>
-                    <select id="addLoaiThu">
-                        <option value="2">Chọn loại thư</option>
-                        <option value="0">Thường</option>
-                        <option value="1">Nhanh</option>
-                    </select><br>
-                    <button id="themThu">Thêm bưu phẩm</button>
-                </div>
-                <div id="addHangHoa" style="display: none">
-                    <input id="addnguoiNhanHH" placeholder="Tên người nhận"><br>
-                    <input id="addAddressHH" placeholder="Địa chỉ nhận hàng"><br>
-                    <input type="number" id="addTrongLuong" placeholder="Nhập trọng lượng"><br>
-                    <button id="themHangHoa">Thêm bưu phẩm</button>
-                </div>
-            </div>
-        </td>
-        <td>
-            <button id="edit">Sửa Bưu Phẩm</button>
-            <br> <br>
-            <div id="sua" style="display: none;">
-                <input type="number" id="editId" placeholder="Nhập id"> <br>
-                <p id="editResult"></p>
-                <div id="suaThu" style="display: none">
-                    <input id="editNguoiNhanThu" placeholder="Tên người nhận"><br>
-                    <input id="editAddressThu" placeholder="Địa chỉ nhận hàng"><br>
-                    <select id="editLoaiThu">
-                        <option value="2">Chọn loại thư</option>
-                        <option value="0">Thường</option>
-                        <option value="1">Nhanh</option>
-                    </select>
-                    <br>
-                    <select id="editStatusThu">
-                        <option value="null">Chọn trạng thái bưu phẩm</option>
-                        <option value="true">Đã gửi</option>
-                        <option value="false">Chưa gửi</option>
-                    </select>
-                    <br>
-                    <button id="editThu">Sửa bưu phẩm</button>
-                </div>
-                <div id="suaHangHoa" style="display: none">
-                    <input id="editNguoiNhanHH" placeholder="Tên người nhận"><br>
-                    <input id="editAddressHH" placeholder="Địa chỉ nhận hàng"><br>
-                    <input type="number" id="editTrongLuong" placeholder="Nhập trọng lượng"><br>
-                    <select id="editStatusHH">
-                        <option value="true">Đã gửi</option>
-                        <option value="false">Chưa gửi</option>
-                    </select>
-                    <button id="editHH">Sửa bưu phẩm</button>
-                </div>
-            </div>
-        </td>
-        <td>
-            <button id="delete">Xóa Bưu Phẩm</button>
-            <br> <br>
-            <div id="xoa" style="display: none;">
-                <input type="number" id="delId" placeholder="Nhập id"> <br>
-                <p id="delResult"></p>
-                <button id="delBP" style="display: none">Xóa</button>
-            </div>
-        </td>
-    </tr>
+<h1>Quản Lý Bưu Phẩm</h1>
 
-</table>
-<p id="result"></p>
+<!-- Nút thêm trên -->
+<button id="btnAddTop">➕ Thêm Bưu Phẩm</button>
 
+<table id="display"></table>
+
+<!-- Nút thêm dưới -->
+<button id="btnAddBottom">➕ Thêm Bưu Phẩm</button>
+
+<!-- Modal thêm -->
+<div id="addModal" class="modal">
+    <div class="modal-content">
+        <span class="close" id="closeAdd">&times;</span>
+        <h2>Thêm Bưu Phẩm</h2>
+
+        <label>Chọn loại bưu phẩm</label>
+        <select id="loaiBP">
+            <option value="2">-- Chọn loại bưu phẩm --</option>
+            <option value="0">Thư</option>
+            <option value="1">Hàng Hóa</option>
+        </select>
+
+        <!-- Form Thư -->
+        <div id="addThu" style="display:none; margin-top: 10px;">
+            <input id="addNguoiNhanThu" placeholder="Tên người nhận"><br>
+            <input id="addAddressThu" placeholder="Địa chỉ nhận hàng"><br>
+            <select id="addLoaiThu">
+                <option value="2">-- Chọn loại thư --</option>
+                <option value="0">Thường</option>
+                <option value="1">Nhanh</option>
+            </select><br>
+            <button id="themThu">Thêm Thư</button>
+        </div>
+
+        <!-- Form Hàng Hóa -->
+        <div id="addHangHoa" style="display:none; margin-top: 10px;">
+            <input id="addnguoiNhanHH" placeholder="Tên người nhận"><br>
+            <input id="addAddressHH" placeholder="Địa chỉ nhận hàng"><br>
+            <input type="number" id="addTrongLuong" placeholder="Nhập trọng lượng (kg)"><br>
+            <button id="themHangHoa">Thêm Hàng Hóa</button>
+        </div>
+    </div>
+</div>
+
+<!-- Modal sửa -->
+<div id="editModal" class="modal">
+    <div class="modal-content">
+        <span class="close" id="closeEdit">&times;</span>
+        <h2>Sửa Bưu Phẩm</h2>
+        <input id="editId" type="hidden">
+        <input id="editNguoiNhan" placeholder="Tên người nhận"><br>
+        <input id="editAddress" placeholder="Địa chỉ nhận hàng"><br>
+        <div id="editLoaiThuBox" style="display:none;">
+            <select id="editLoaiThu">
+                <option value="0">Thường</option>
+                <option value="1">Nhanh</option>
+            </select><br>
+        </div>
+        <div id="editTrongLuongBox" style="display:none;">
+            <input type="number" id="editTrongLuong" placeholder="Nhập trọng lượng (kg)"><br>
+        </div>
+        <label><input type="checkbox" id="editStatus"> Đã giao</label><br><br>
+        <button id="btnSaveEdit">Lưu</button>
+    </div>
+</div>
 </body>
 <script src="index.js"></script>
 </html>

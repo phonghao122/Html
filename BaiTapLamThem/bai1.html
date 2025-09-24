@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    let n = prompt("Nhập n", 0);
+    let arr = [];
+    if(n > 0){
+        for (let i = 0; i < n; i++) {
+            let a = prompt(`Nhập phần tử thứ ${i+1}`,0);
+            arr.push(a);
+        }
+        let data = "";
+        for(let j = 0; j < arr.length; j++){
+            data += `${arr[j]} `;
+        }
+        alert(`Mảng vừa nhập: ${data}`);
+    }
+</script>
+</html>
